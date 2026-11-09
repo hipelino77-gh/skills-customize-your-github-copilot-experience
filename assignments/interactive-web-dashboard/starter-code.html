@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>School Club Directory</title>
+    <style>
+      :root {
+        font-family: system-ui, sans-serif;
+        color: #1d2926;
+        background: #f3f6f2;
+      }
+
+      body {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      header {
+        border-bottom: 2px solid #c8d6ce;
+        margin-bottom: 1.5rem;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      label {
+        display: grid;
+        gap: 0.4rem;
+      }
+
+      input,
+      select {
+        min-width: 220px;
+        padding: 0.65rem;
+        border: 1px solid #82978c;
+        border-radius: 4px;
+        background: #fff;
+        color: inherit;
+        font: inherit;
+      }
+
+      #club-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+        gap: 1rem;
+      }
+
+      .club-card {
+        padding: 1rem;
+        border: 1px solid #c8d6ce;
+        border-top: 4px solid #28745a;
+        background: #fff;
+      }
+
+      .club-card h2 {
+        margin-top: 0;
+      }
+
+      .club-category {
+        color: #405d50;
+        font-weight: 700;
+      }
+
+      #results-count {
+        min-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>School Club Directory</h1>
+      <p>Find a club to try this term.</p>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Find a club">
+        <label for="club-search">
+          Search clubs
+          <input id="club-search" type="search" />
+        </label>
+        <label for="category-filter">
+          Category
+          <select id="category-filter">
+            <option value="all">All categories</option>
+            <option value="Arts">Arts</option>
+            <option value="STEM">STEM</option>
+            <option value="Service">Service</option>
+            <option value="Sports">Sports</option>
+          </select>
+        </label>
+      </section>
+
+      <p id="results-count" aria-live="polite"></p>
+      <section id="club-list" aria-label="Club results"></section>
+    </main>
+
+    <script>
+      const clubs = [
+        {
+          name: "Art Studio",
+          category: "Arts",
+          meetingDay: "Monday",
+          description: "Draw, paint, and try new materials.",
+        },
+        {
+          name: "Robotics Workshop",
+          category: "STEM",
+          meetingDay: "Tuesday",
+          description: "Build and program small robots as a team.",
+        },
+        {
+          name: "Campus Garden",
+          category: "Service",
+          meetingDay: "Wednesday",
+          description: "Grow vegetables and care for the school garden.",
+        },
+        {
+          name: "Badminton Club",
+          category: "Sports",
+          meetingDay: "Thursday",
+          description: "Practice serves, rallies, and friendly matches.",
+        },
+      ];
+
+      const searchInput = document.querySelector("#club-search");
+      const categoryFilter = document.querySelector("#category-filter");
+      const clubList = document.querySelector("#club-list");
+      const resultsCount = document.querySelector("#results-count");
+
+      function renderDashboard(clubsToDisplay) {}
+
+      function applyFilters() {}
+
+      searchInput.addEventListener("input", applyFilters);
+      categoryFilter.addEventListener("change", applyFilters);
+      applyFilters();
+    </script>
+  </body>
+</html>

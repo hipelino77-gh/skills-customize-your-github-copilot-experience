@@ -65,6 +65,20 @@
       "description": "Build a task-management REST API with FastAPI, Pydantic validation, and CRUD endpoints.",
       "path": "assignments/building-rest-apis-with-fastapi",
       "dueDate": "2026-11-16"
+    },
+    {
+      "id": "interactive-web-dashboard",
+      "title": "Interactive Web Dashboard",
+      "description": "Build a searchable, filterable browser dashboard with HTML, CSS, and JavaScript.",
+      "path": "assignments/interactive-web-dashboard",
+      "dueDate": "2026-11-16",
+      "attachments": [
+        {
+          "name": "Starter Code",
+          "file": "starter-code.html",
+          "type": "html"
+        }
+      ]
     }
   ]
 }
